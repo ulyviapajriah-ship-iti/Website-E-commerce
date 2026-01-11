@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Our Chef - IndonesianFood</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #fdfaf7;
+        color: #333;
+        line-height: 1.8;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 80px auto;
+        padding: 0 20px;
+      }
+
+      .chef-section {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        background: #fff;
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Image Side */
+      .chef-image {
+        flex: 1;
+        position: relative;
+      }
+
+      .chef-image img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Decorative Element behind image */
+      .chef-image::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 4px solid #e67e22;
+        top: 20px;
+        left: -20px;
+        z-index: -1;
+        border-radius: 20px;
+      }
+
+      /* Content Side */
+      .chef-content {
+        flex: 1.5;
+      }
+
+      .chef-content .title {
+        color: #e67e22;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .chef-content h1 {
+        font-size: 3rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .chef-content p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 25px;
+      }
+
+      /* Expert List */
+      .expertise {
+        margin-bottom: 30px;
+      }
+
+      .expertise-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .expertise-item i {
+        color: #e67e22;
+        margin-right: 15px;
+        font-size: 1.2rem;
+      }
+
+      /* Quote */
+      .chef-quote {
+        font-style: italic;
+        border-left: 4px solid #e67e22;
+        padding-left: 20px;
+        margin: 30px 0;
+        color: #7f8c8d;
+      }
+
+      /* Social Icons */
+      .chef-social a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-right: 20px;
+        transition: 0.3s;
+      }
+
+      .chef-social a:hover {
+        color: #e67e22;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .chef-section {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px;
+        }
+        .chef-image::before {
+          display: none;
+        }
+        .chef-quote {
+          border-left: none;
+          border-top: 2px solid #e67e22;
+          padding: 20px 0;
+        }
+        .expertise-item {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="food.html">Home</a></li>
+      <li><a href="special.html">Special</a></li>
+      <li><a href="#">Chef</a></li>
+      <li><a href="#">Client</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="container">
+      <div class="chef-section">
+        <div class="chef-image">
+          <img
+            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt="Executive Chef"
+          />
+        </div>
+
+        <div class="chef-content">
+          <span class="title">Master of Spices</span>
+          <h1>Chef Budi Santoso</h1>
+
+          <p>
+            With over 15 years of experience in traditional Indonesian kitchens,
+            Chef Budi brings the soulful flavors of the archipelago to your
+            table. His philosophy is simple:
+            <strong
+              >"Respect the ingredients, and the flavors will follow."</strong
+            >
+          </p>
+
+          <div class="chef-quote">
+            "At IndonesianFood, every dish is a journey back home. We don't just
+            cook; we tell stories through our spices."
+          </div>
+
+          <div class="expertise">
+            <div class="expertise-item">
+              <i class="fas fa-check-circle"></i> Traditional Javanese Cuisine
+              Specialist
+            </div>
+            <div class="expertise-item">
+              <i class="fas fa-check-circle"></i> Expert in Handmade Sambal
+              Techniques
+            </div>
+            <div class="expertise-item">
+              <i class="fas fa-check-circle"></i> Sustainable Ingredient
+              Sourcing
+            </div>
+          </div>
+
+          <div class="chef-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fas fa-utensils"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

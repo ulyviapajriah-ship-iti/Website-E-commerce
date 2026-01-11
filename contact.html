@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - IndonesianFood</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      /* CSS RESET & BASE */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      nav {
+        position: static;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+      }
+
+      .nav__logo a {
+        color: var(--primary-color);
+      }
+      .nav__menu__btn {
+        display: none;
+      }
+
+      .nav__links {
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none;
+      }
+
+      .nav__links a {
+        color: var(--text-dark);
+      }
+
+      .nav__links a:hover {
+        color: var(--primary-color);
+      }
+
+      .nav__btn {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+      }
+
+      .nav__btn .btn {
+        padding: 8px 10px;
+        font-size: 1.5rem;
+        border-radius: 100%;
+      }
+
+      /* ===HEADER=== */
+      .section__container {
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 5rem 1rem;
+      }
+
+      .section__description {
+        color: var(--text-light);
+        line-height: 1.75rem;
+        text-align: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        outline: none;
+        border: none;
+        white-space: nowrap;
+        font-size: 1rem;
+        color: var(--white);
+        background-color: var(--primary-color);
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .header__container {
+        display: grid;
+        gap: 2rem;
+        overflow: hidden;
+      }
+
+      .header__image img {
+        max-width: 600px;
+        margin-inline: auto;
+      }
+
+      .header__content h1 {
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        color: var(--text-dark);
+        text-align: center;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 50px auto;
+      }
+
+      /* HEADER */
+      .contact-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .contact-header h1 {
+        color: #e67e22;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .contact-header p {
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      /* MAIN WRAPPER */
+      .contact-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      /* LEFT SIDE - INFO */
+      .contact-info {
+        flex: 1;
+        min-width: 300px;
+        background: #e67e22;
+        color: white;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-info h2 {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .info-item i {
+        font-size: 1.5rem;
+        margin-right: 20px;
+        width: 30px;
+        text-align: center;
+      }
+
+      .info-item div h4 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.9;
+      }
+
+      .info-item div p {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      /* RIGHT SIDE - FORM */
+      .contact-form {
+        flex: 1.5;
+        min-width: 300px;
+        padding: 40px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #444;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: #e67e22;
+        outline: none;
+        box-shadow: 0 0 8px rgba(230, 126, 34, 0.2);
+      }
+
+      .btn-send {
+        background: #e67e22;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s ease;
+      }
+
+      .btn-send:hover {
+        background: #d35400;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .contact-header h1 {
+          font-size: 2rem;
+        }
+        .contact-wrapper {
+          flex-direction: column;
+        }
+        .contact-info {
+          padding: 30px;
+        }
+        .contact-form {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>
+          Have questions about our authentic menu or your order? We're here to
+          help.
+        </p>
+      </div>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="food.html">Home</a></li>
+        <li><a href="special.html">Special</a></li>
+        <li><a href="chef.html">Chef</a></li>
+        <li><a href="#">Client</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>Contact Info</h2>
+
+          <div class="info-item">
+            <i class="fas fa-store"></i>
+            <div>
+              <h4>Store Name</h4>
+              <p>IndonesianFood</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>123 Spice Street, Jakarta, Indonesia</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4>WhatsApp / Call</h4>
+              <p>+62 812 3456 7890</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email Us</h4>
+              <p>support@indonesianfood.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Mon - Sun: 09:00 AM - 10:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter your name" required />
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="example@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label>Order Number (Optional)</label>
+              <input type="text" placeholder="e.g. #IDFOOD-99" />
+            </div>
+
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea
+                rows="4"
+                placeholder="How can we assist you today?"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-send">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

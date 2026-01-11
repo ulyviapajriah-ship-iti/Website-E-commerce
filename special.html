@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Menu - IndonesianFood</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #fcfcfc;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      /* HEADER SECTION */
+      .special-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .special-header span {
+        color: #e67e22;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .special-header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        color: #2c3e50;
+        margin-top: 10px;
+      }
+
+      .special-header p {
+        max-width: 600px;
+        margin: 15px auto;
+        color: #7f8c8d;
+      }
+
+      /* GRID SYSTEM */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      /* MENU CARD */
+      .menu-card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        position: relative;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Badge "Best Seller" or "Limited" */
+      .badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: #e67e22;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        z-index: 10;
+      }
+
+      .menu-img {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .menu-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: scale 0.5s ease;
+      }
+
+      .menu-card:hover .menu-img img {
+        scale: 1.1;
+      }
+
+      .menu-content {
+        padding: 25px;
+      }
+
+      .menu-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .menu-info h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        color: #2c3e50;
+      }
+
+      .price {
+        color: #e67e22;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .description {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        margin-bottom: 20px;
+        height: 45px;
+        overflow: hidden;
+      }
+
+      /* BUTTONS */
+      .card-footer {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn-order {
+        flex: 2;
+        background: #e67e22;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-order:hover {
+        background: #d35400;
+      }
+
+      .btn-wishlist {
+        flex: 0.5;
+        background: #f8f9fa;
+        color: #e74c3c;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn-wishlist:hover {
+        background: #ffeaea;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .special-header h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="food.html">Home</a></li>
+      <li><a href="special.html">Special</a></li>
+      <li><a href="#">Chef</a></li>
+      <li><a href="#">Client</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="container">
+      <header class="special-header">
+        <span>Must Try</span>
+        <h1>Chef's Special Picks</h1>
+        <p>
+          Experience the authentic taste of Indonesia through our curated
+          signature dishes, prepared with love and secret family recipes.
+        </p>
+      </header>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="badge">Recommended</div>
+          <div class="menu-img">
+            <img src="rendangg.jpg" alt="Smoked Rendang" />
+          </div>
+          <div class="menu-content">
+            <div class="menu-info">
+              <h3>Smoked Rendang</h3>
+              <span class="price">$12.50</span>
+            </div>
+            <p class="description">
+              Premium beef slow-cooked for 12 hours with authentic Minang spices
+              and coconut milk.
+            </p>
+            <div class="card-footer">
+              <a href="#" class="btn-order">Order Now</a>
+              <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="badge">Limited</div>
+          <div class="menu-img">
+            <img src="tumpeng.jpg" alt="Tumpeng Mini" />
+          </div>
+          <div class="menu-content">
+            <div class="menu-info">
+              <h3>Royal Tumpeng</h3>
+              <span class="price">$15.00</span>
+            </div>
+            <p class="description">
+              Yellow turmeric rice served with 7 varieties of traditional side
+              dishes representing Indonesian heritage.
+            </p>
+            <div class="card-footer">
+              <a href="#" class="btn-order">Order Now</a>
+              <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="badge">New Release</div>
+          <div class="menu-img">
+            <img
+              src="https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=600&q=80"
+              alt="Sate Ayam Madura"
+            />
+          </div>
+          <div class="menu-content">
+            <div class="menu-info">
+              <h3>Grilled Chicken Satay</h3>
+              <span class="price">$9.00</span>
+            </div>
+            <p class="description">
+              Tender grilled chicken skewers drenched in our signature creamy
+              peanut sauce and sweet soy sauce.
+            </p>
+            <div class="card-footer">
+              <a href="#" class="btn-order">Order Now</a>
+              <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
